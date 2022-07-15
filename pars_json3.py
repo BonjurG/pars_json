@@ -1,14 +1,14 @@
 import json
 
-with open('Alphabet.json') as dict:
-    d = json.load(dict)
+with open('Alphabet.json') as dict_file:
+    dict = json.load(dict_file)
 
-with open('Abracadabra.txt') as text:
-    t = text.read()
+with open('Abracadabra.txt') as text_file:
+    text = text_file.read()
 
-for i in t:
-    if i in d:
-        print(d[i], end='')
+for i in text:
+    if i in dict:
+        print(dict[i], end='')
     else:
         print(i, end='')
 
